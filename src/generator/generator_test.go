@@ -1,7 +1,7 @@
 package generator
 
 import (
-	"lucx-lab/passGenerator/src/options"
+	"github.com/LuLmth/passGenerator/src/options"
 	"math/rand"
 	"testing"
 	"time"

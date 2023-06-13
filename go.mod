@@ -1,3 +1,3 @@
-module lucx-lab/passGenerator
+module github.com/LuLmth/passGenerator
 
 go 1.20

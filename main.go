@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"lucx-lab/passGenerator/src/generator"
-	"lucx-lab/passGenerator/src/options"
+	"github.com/LuLmth/passGenerator/src/generator"
+	"github.com/LuLmth/passGenerator/src/options"
 )
 
 func main() {
