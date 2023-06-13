@@ -2,7 +2,9 @@ package generator
 
 import (
 	"lucx-lab/passGenerator/src/options"
+	"math/rand"
 	"testing"
+	"time"
 )
 
 const (
@@ -36,9 +38,10 @@ func TestSetCharOptions(t *testing.T) {
 }
 
 func TestRandomElement(t *testing.T) {
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	s := "abc"
-	r := RandomElement(s)
-	if r != 'a' && r != 'b' && r != 'c' {
-		t.Errorf("Expected %v to be one of %v", r, s)
+	elem := RandomElement(r, s)
+	if elem != 'a' && elem != 'b' && elem != 'c' {
+		t.Errorf("Expected %v to be one of %v", elem, s)
 	}
 }

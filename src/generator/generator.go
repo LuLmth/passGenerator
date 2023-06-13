@@ -42,7 +42,7 @@ func (g Generator) Generate() string {
 
 	for i := 0; i < g.Options.Length; i++ {
 		rType := r.Intn(len(g.CharOptions))
-		res[i] = RandomElement(g.CharOptions[rType])
+		res[i] = RandomElement(r, g.CharOptions[rType])
 	}
 	return string(res)
 }
@@ -55,7 +55,6 @@ func NewGenerator(options options.Options) Generator {
 	return g
 }
 
-func RandomElement(s string) byte {
-	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+func RandomElement(r *rand.Rand, s string) byte {
 	return s[r.Intn(len(s))]
 }
